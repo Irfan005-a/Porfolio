@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio showcasing web development projects, skills, and experience">
+    <meta name="keywords" content="web developer, portfolio, frontend, backend, fullstack">
+    <meta name="author" content="Muhammad Irfan">
+    <meta property="og:title" content="Muhammad Irfan - Web Developer Portfolio">
+    <meta property="og:description" content="Professional portfolio showcasing web development projects and skills">
+    <meta property="og:type" content="website">
+    <title>Muhammad Irfan - Web Developer Portfolio</title>
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- TailwindCSS Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        },
+                        dark: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-dark-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full bg-white/80 dark:bg-dark-900/80 backdrop-blur-md z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold text-primary-600 dark:text-primary-500">Portfolio</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#projects" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#skills" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Theme Toggle & Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-dark-800 hover:bg-gray-200 dark:hover:bg-dark-700 transition-colors">
+                        <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
+                        <i class="fas fa-moon text-blue-400 hidden dark:block"></i>
+                    </button>
+                    
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-dark-800 hover:bg-gray-200 dark:hover:bg-dark-700 transition-colors">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-dark-900 border-t border-gray-200 dark:border-dark-800">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#projects" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="#skills" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent animate-name-colors" id="name-text">
+                    Muhammad Irfan
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-8 text-gray-700 dark:text-gray-300 typing-animation" id="typing-text">
+                    Machine Learning Enthusiast
+                </h2>
+                <p class="text-lg md:text-xl mb-12 text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    I am an ML/Data Engineer, and part-time Web Developer.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold btn-animated hover-lift shadow-lg">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="border-2 border-primary-600 text-primary-600 dark:text-primary-400 hover:bg-primary-600 hover:text-white px-8 py-3 rounded-lg font-semibold btn-animated hover-lift">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-primary-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="relative profile-image-container">
+                        <div class="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-primary-500 to-purple-600 p-1 animate-float">
+                            <div class="w-full h-full rounded-full bg-white dark:bg-dark-800 p-2">
+                                <img src="images/profile.jpg" 
+                                     alt="Muhammad Irfan - ML/Data Engineer" 
+                                     class="w-full h-full rounded-full object-cover hover:scale-110 transition-all duration-500 animate-float"
+                                     style="opacity: 1; display: block;"
+                                     onerror="this.src='images.unsplash.com/face'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-6">ML/Data Engineer & Web Developer</h3>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                        I'm a passionate ML/Data Engineer with expertise in machine learning, AI, and data engineering. 
+                        I specialize in building scalable data pipelines, developing ML models, and creating intelligent solutions 
+                        that drive business value.
+                    </p>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                        As a part-time web developer, I also create modern, responsive web applications. When I'm not working on 
+                        data projects, you can find me exploring new ML technologies, contributing to open-source projects, 
+                        or sharing knowledge with the developer community.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-primary-600"></i>
+                            <span>Your Location</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-primary-600"></i>
+                            <a href="mailto:fa24.bse.05@gmail.com" class="hover:text-primary-600 transition-colors">fa24.bse.05@gmail.com</a>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-primary-600"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-calendar text-primary-600"></i>
+                            <span>Available for hire</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50 dark:bg-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">My Projects</h2>
+                <div class="w-24 h-1 bg-primary-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white dark:bg-dark-900 rounded-lg shadow-lg overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop" 
+                             alt="E-Commerce Application" 
+                             class="w-full h-48 object-cover hover:scale-110 transition-transform duration-500"
+                             loading="lazy">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Python</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">ML Model Pipeline</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            A comprehensive machine learning pipeline with data preprocessing, model training, and deployment using Docker.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary-600 hover:text-primary-700 font-semibold">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="text-primary-600 hover:text-primary-700 font-semibold">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-white dark:bg-dark-900 rounded-lg shadow-lg overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop" 
+                             alt="Task Management App" 
+                             class="w-full h-48 object-cover hover:scale-110 transition-transform duration-500"
+                             loading="lazy">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">Data</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Data Engineering Pipeline</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            An ETL pipeline for processing large datasets with MongoDB integration and real-time analytics dashboard.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary-600 hover:text-primary-700 font-semibold">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="text-primary-600 hover:text-primary-700 font-semibold">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-white dark:bg-dark-900 rounded-lg shadow-lg overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop" 
+                             alt="Weather Application" 
+                             class="w-full h-48 object-cover hover:scale-110 transition-transform duration-500"
+                             loading="lazy">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">Web</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            A modern, responsive portfolio website built with HTML, CSS, and JavaScript with smooth animations.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary-600 hover:text-primary-700 font-semibold">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="text-primary-600 hover:text-primary-700 font-semibold">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white dark:bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Skills & Technologies</h2>
+                <div class="w-24 h-1 bg-primary-600 mx-auto"></div>
+            </div>
+            
+            <!-- ML/Data Engineering Skills -->
+            <div class="mb-16" data-aos="fade-up">
+                <h3 class="text-2xl font-bold mb-8 text-center">Machine Learning / AI / Data Engineering</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <a href="https://www.python.org/doc/" target="_blank" class="skill-card">
+                        <div class="flex flex-col items-center p-6 bg-white dark:bg-dark-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                            <i class="fab fa-python text-4xl text-blue-600 mb-3"></i>
+                            <span class="font-semibold text-center">Python</span>
+                        </div>
+                    </a>
+                    <a href="https://scikit-learn.org/stable/" target="_blank" class="skill-card">
+                        <div class="flex flex-col items-center p-6 bg-white dark:bg-dark-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                            <i class="fas fa-brain text-4xl text-orange-600 mb-3"></i>
+                            <span class="font-semibold text-center">ML Libraries</span>
+                        </div>
+                    </a>
+                    <a href="https://docs.docker.com/" target="_blank" class="skill-card">
+                        <div class="flex flex-col items-center p-6 bg-white dark:bg-dark-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                            <i class="fab fa-docker text-4xl text-blue-500 mb-3"></i>
+                            <span class="font-semibold text-center">Docker</span>
+                        </div>
+                    </a>
+                    <a href="https://docs.mongodb.com/" target="_blank" class="skill-card">
+                        <div class="flex flex-col items-center p-6 bg-white dark:bg-dark-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                            <i class="fas fa-database text-4xl text-green-600 mb-3"></i>
+                            <span class="font-semibold text-center">MongoDB</span>
+                        </div>
+                    </a>
+                    <a href="https://www.postgresql.org/docs/" target="_blank" class="skill-card">
+                        <div class="flex flex-col items-center p-6 bg-white dark:bg-dark-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                            <i class="fas fa-database text-4xl text-blue-700 mb-3"></i>
+                            <span class="font-semibold text-center">SQL</span>
+                        </div>
+                    </a>
+                    <a href="https://docs.github.com/" target="_blank" class="skill-card">
+                        <div class="flex flex-col items-center p-6 bg-white dark:bg-dark-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                            <i class="fab fa-github text-4xl text-gray-800 dark:text-white mb-3"></i>
+                            <span class="font-semibold text-center">Git/GitHub</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Web Development Skills -->
+            <div data-aos="fade-up">
+                <h3 class="text-2xl font-bold mb-8 text-center">Web Development (Part-time)</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="skill-card">
+                        <div class="flex flex-col items-center p-6 bg-white dark:bg-dark-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                            <i class="fab fa-html5 text-4xl text-orange-600 mb-3"></i>
+                            <span class="font-semibold text-center">HTML</span>
+                        </div>
+                    </a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="skill-card">
+                        <div class="flex flex-col items-center p-6 bg-white dark:bg-dark-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                            <i class="fab fa-css3-alt text-4xl text-blue-600 mb-3"></i>
+                            <span class="font-semibold text-center">CSS</span>
+                        </div>
+                    </a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="skill-card">
+                        <div class="flex flex-col items-center p-6 bg-white dark:bg-dark-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                            <i class="fab fa-js-square text-4xl text-yellow-400 mb-3"></i>
+                            <span class="font-semibold text-center">JavaScript</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-primary-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div data-aos="fade-right">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name" required
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-dark-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-900">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" required
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-dark-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-900">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                   class="w-full px-4 py-3 border border-gray-300 dark:border-dark-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-900">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="6" required
+                                      class="w-full px-4 py-3 border border-gray-300 dark:border-dark-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-900 resize-none"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-primary-600 hover:bg-primary-700 text-white py-3 px-6 rounded-lg font-semibold btn-animated hover-lift">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-8">Let's Connect</h3>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+                        I'm always interested in new opportunities and exciting projects. 
+                        Feel free to reach out if you'd like to collaborate or just want to say hello!
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p class="text-gray-600 dark:text-gray-400">fa24.bse.05@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Phone</h4>
+                                <p class="text-gray-600 dark:text-gray-400">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Location</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Your City, Country</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="mt-8">
+                        <h4 class="font-semibold mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center hover:bg-primary-700 transition-colors">
+                                <i class="fab fa-github text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors">
+                                <i class="fab fa-linkedin text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-blue-400 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">
+                                <i class="fab fa-twitter text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-pink-600 rounded-lg flex items-center justify-center hover:bg-pink-700 transition-colors">
+                                <i class="fab fa-instagram text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-primary-500 mb-4">Muhammad Irfan</h3>
+                    <p class="text-gray-400 mb-4">
+                        A passionate web developer creating amazing digital experiences.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary-500 transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-500 transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-500 transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-primary-500 transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-primary-500 transition-colors">About</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-primary-500 transition-colors">Projects</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-primary-500 transition-colors">Skills</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-primary-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-envelope text-primary-500"></i>
+                            <span>fa24.bse.05@gmail.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-phone text-primary-500"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-map-marker-alt text-primary-500"></i>
+                            <span>Your City, Country</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Muhammad Irfan. All rights reserved. | Designed with ❤️
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 
